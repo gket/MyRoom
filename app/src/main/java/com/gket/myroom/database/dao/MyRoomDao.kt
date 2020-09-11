@@ -19,6 +19,10 @@ interface MyRoomDao {
     @Delete
     suspend fun deleteNote(note : Note)
 
-    @Query("SELECT * FROM note where noteTitle like :searchQuery OR noteDescription like :searchQuery")
+    @Query("SELECT * FROM note where noteTitle like :searchQuery OR noteDescription like :searchQuery ORDER BY notePoint DESC")
     suspend fun getSearchResults(searchQuery : String?) : List<Note>
+
+    @Query("SELECT * FROM note where noteId = :noteId")
+    suspend fun getNoteDetailById(noteId : Int) : Note
+
 }

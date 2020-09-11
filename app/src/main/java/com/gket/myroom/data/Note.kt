@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey
 // @Entity (tableName = notes) diyebilirsiniz
 data class Note(
     @PrimaryKey(autoGenerate = true)
-    var noteId: Int,
-    var noteTitle: String,
-    var noteDescription: String,
-    var notePoint: String
+    var noteId: Int? = null,
+    var noteTitle: String = "",
+    var noteDescription: String = "",
+    var notePoint: Int = 0
 )

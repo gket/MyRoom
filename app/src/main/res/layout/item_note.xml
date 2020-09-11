@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewDate"
-        android:layout_width="100dp"
+        android:layout_width="40dp"
         android:layout_height="100dp"
-        android:background="@drawable/bg_search"
+        app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,7 +23,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textViewDate"
+                android:id="@+id/textViewPriority"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
@@ -37,9 +41,11 @@
         android:id="@+id/cardViewDetail"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/bg_search"
+        android:layout_marginStart="8dp"
+        app:cardBackgroundColor="@android:color/white"
         app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardViewDate"
         app:layout_constraintTop_toTopOf="parent">
@@ -69,6 +75,18 @@
                 android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintStart_toStartOf="@+id/textViewTitle"
                 app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
